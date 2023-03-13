@@ -1,0 +1,7 @@
+.full{
+    height: 100vh;
+}
+.txt-justify{
+    text-align: justify!important;
+  text-justify: auto!important;
+}
