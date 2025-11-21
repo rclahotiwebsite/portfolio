@@ -78,16 +78,27 @@
         <div class="row justify-content-center mb-5">
             <div class="col-lg-8 text-center">
                 <p class="lead">
-                    Scroll through photographs of Justice R.C. Lahoti with various dignitaries, while taking oath,
-                    meeting the
-                    President, Former Prime Minister, with family and delivering lectures at various seminars and
-                    conferences.
+                    A treasured collection of cherished moments—Justice R.C. Lahoti with distinguished dignitaries,
+                    taking the oath of office, meeting the President and Former Prime Ministers, sharing moments with
+                    family,
+                    and delivering lectures at various seminars and conferences. Each photograph tells a story of
+                    dedication,
+                    wisdom, and service.
                 </p>
             </div>
         </div>
 
-        <div class="row g-4" id="gallery-grid">
-            <!-- Images will be injected here -->
+        <!-- Collage Gallery -->
+        <div class="gallery-collage" id="gallery-collage">
+            <!-- Images will be dynamically injected here -->
+        </div>
+
+        <!-- Lightbox Modal -->
+        <div class="lightbox" id="lightbox">
+            <div class="lightbox-content">
+                <span class="lightbox-close" id="lightbox-close">&times;</span>
+                <img src="" alt="Gallery Image" id="lightbox-img">
+            </div>
         </div>
     </main>
 
@@ -123,23 +134,89 @@
             "98e_1.jpg", "98e_2.jpg", "98e_3.jpg", "101e.jpg"
         ];
 
-        const galleryGrid = document.getElementById('gallery-grid');
+        const galleryCollage = document.getElementById('gallery-collage');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
 
-        arrOfImg.forEach(imgName => {
-            const col = document.createElement('div');
-            col.className = 'col-md-4 col-sm-6 gallery-item-wrapper';
+        // Size classes for varied collage effect
+        const sizeClasses = ['', 'size-small', 'size-large', 'size-featured'];
 
+        // Create gallery items with varied sizes
+        arrOfImg.forEach((imgName, index) => {
             const item = document.createElement('div');
             item.className = 'gallery-item';
+
+            // Add varied sizes (featured size for every 8th image, varied for others)
+            if (index % 8 === 0) {
+                item.classList.add('size-featured');
+            } else {
+                const randomSize = sizeClasses[Math.floor(Math.random() * 3)];
+                if (randomSize) item.classList.add(randomSize);
+            }
+
+            // Set staggered animation delay
+            item.style.animationDelay = `${(index % 12) * 0.05}s`;
+
+            const photo = document.createElement('div');
+            photo.className = 'gallery-photo';
 
             const img = document.createElement('img');
             img.src = `./assets/img/speech/hindi/${imgName}`;
             img.alt = 'Justice Lahoti Gallery Image';
             img.loading = 'lazy';
 
-            item.appendChild(img);
-            col.appendChild(item);
-            galleryGrid.appendChild(col);
+            // Lightbox click handler
+            photo.addEventListener('click', () => {
+                lightbox.classList.add('active');
+                lightboxImg.src = img.src;
+                document.body.style.overflow = 'hidden';
+            });
+
+            photo.appendChild(img);
+            item.appendChild(photo);
+            galleryCollage.appendChild(item);
+        });
+
+        // Close lightbox handlers
+        lightboxClose.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // ESC key to close lightbox
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Intersection Observer for scroll animations (enhanced)
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all gallery items
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            observer.observe(item);
         });
     </script>
 </body>
