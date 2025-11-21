@@ -4,18 +4,29 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RC LAHOTI</title>
+    <title>Justice R.C. Lahoti | Tribute</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
 
     <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">RC LAHOTI</a>
+            <a class="navbar-brand" href="./index.html">JUSTICE R.C. LAHOTI</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -23,88 +34,101 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="./about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="./message.html">Condolence Messages</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Speeches
-                        </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./speaches/english.html">English</a></li>
-                            <li><a class="dropdown-item" href="./speaches/hindi.html">Hindi</a></li>
+                            <li><a class="dropdown-item" href="./speeches/english.html">English</a></li>
+                            <li><a class="dropdown-item" href="./speeches/hindi.html">Hindi</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="./speaches/video.html">Video</a></li>
+                            <li><a class="dropdown-item" href="./speeches/video.html">Video</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="./gallery.html">Gallery</a>
+                        <a class="nav-link" href="./gallery.html">Gallery</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!-- Hero Section -->
-    <img src="./assets/img/banner.jpg" width="100%" alt="" class="img-fluid">
-    <div class="container">
-        <div class="p-4"></div>
-        <div class="row">
-            <div class="col-md-4 col-12">
-                <center>
-                    <img id="profile" src="./assets/img/profile/0.jpg" class="img-fluid" style="border-radius: 50%;" alt="..." width="300px">
-                </center>
-                <div class="md-none p-2"></div>
-            </div>
-            <div class="col-md-8 col-12">
-                <p class="txt-justify">
-                    <b>
-                        Justice Lahoti
-                    </b>
-                    , an eminent jurist, a great human being, and a Karam yogi, was known for his massive
-                    contribution to the field of law and the administration of justice and was decorated with the
-                    various honours.
 
-                    From District Court to High Court and finally to Supreme Court, Justice Lahoti reached the pinnacle
-                    of Indian judiciary and adorned the highest Court of the Country as Chief Justice. He made an
-                    exceptional contribution in the field of judicial reforms and upholding constitutional rights of
+    <!-- Hero Section -->
+    <header class="hero-section" style="background-image: url('./assets/img/banner.jpg');">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Justice R.C. Lahoti</h1>
+            <p class="hero-subtitle">35th Chief Justice of India</p>
+            <p class="mt-4 text-white-50">1940 - 2022</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container section-padding">
+        <div class="row align-items-center">
+            <div class="col-md-5 text-center mb-5 mb-md-0">
+                <img id="profile" src="./assets/img/profile/0.jpg" class="img-fluid profile-img rounded-circle"
+                    alt="Justice R.C. Lahoti" width="350">
+            </div>
+            <div class="col-md-7">
+                <h2 class="mb-4">A Life of Service & Integrity</h2>
+                <p class="lead txt-justify">
+                    Justice Lahoti, an eminent jurist, a great human being, and a Karma Yogi, was known for his massive
+                    contribution to the field of law and the administration of justice.
+                </p>
+                <p class="txt-justify">
+                    From District Court to High Court and finally to the Supreme Court, Justice Lahoti reached the
+                    pinnacle
+                    of the Indian judiciary, adorning the highest Court of the Country as Chief Justice. He made an
+                    exceptional contribution in the field of judicial reforms and upholding the constitutional rights of
                     citizens of India. He was keenly interested in educational reforms and propagating Indian cultural
                     values and traditions.
                 </p>
-                <p class="text-center">
-                    <b>
-                        Those we love don’t go away,<br>
+
+                <div class="quote-box">
+                    <p class="mb-0 text-center">
+                        "Those we love don’t go away,<br>
                         They walk beside us every day,<br>
                         Unseen, unheard, but always near,<br>
-                        So loved, so missed, so very dear. <br>
-                    </b>
-                </p>
+                        So loved, so missed, so very dear."
+                    </p>
+                </div>
+
                 <p class="txt-justify">
-                    Browse through various pages of this website to have a look at thought-provoking, informative,
-                    inspiring and refreshing lectures delivered by His Lordship at various conferences and seminars.
+                    Browse through various pages of this website to explore the thought-provoking, informative,
+                    inspiring, and refreshing lectures delivered by His Lordship at various conferences and seminars.
                 </p>
-            </div>
-            <div class="col-12">
-                <p class="h3 text-center"><b><i>The Memories of Justice Lahoti will live on forever in our heart.</i></b></p>
-                <p class="text-center">This website is a tribute to the lasting memory of Justice Lahoti whose deeds in life assured that his memory shall not be lost in spite of the cruel hands of death.                </p>
             </div>
         </div>
-    </div>
+
+        <div class="row mt-5 pt-4">
+            <div class="col-12 text-center">
+                <hr class="mb-5" style="width: 50%; margin: 0 auto; opacity: 0.1;">
+                <h3 class="h4 mb-3"><i>The memories of Justice Lahoti will live on forever in our hearts.</i></h3>
+                <p class="text-muted">This website is a tribute to the lasting memory of Justice Lahoti, whose deeds in
+                    life assured that his memory shall not be lost.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-12">
+                    <h5>Justice R.C. Lahoti</h5>
+                    <p class="small mb-0">In Loving Memory</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-        <script>
-            im = Math.floor(Math.random()*6)
-            document.getElementById("profile").src=`./assets/img/profile/${im}.jpg`
-        </script>
+    <script>
+        // Random profile image
+        const im = Math.floor(Math.random() * 6);
+        document.getElementById("profile").src = `./assets/img/profile/${im}.jpg`;
+    </script>
 </body>
 
 </html>
