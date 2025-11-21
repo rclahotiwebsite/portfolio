@@ -4,18 +4,29 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RC LAHOTI</title>
+    <title>Gallery | Justice R.C. Lahoti</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
 
     <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">RC LAHOTI</a>
+            <a class="navbar-brand" href="./index.html">JUSTICE R.C. LAHOTI</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -23,53 +34,85 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="./about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="./message.html">Condolence Messages</a>
+                        <a class="nav-link" href="./about.html">About</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Speeches
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./speaches/english.html">English</a></li>
-                            <li><a class="dropdown-item" href="./speaches/hindi.html">Hindi</a></li>
+                            <li><a class="dropdown-item" href="./speeches/english.html">English</a></li>
+                            <li><a class="dropdown-item" href="./speeches/hindi.html">Hindi</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="./speaches/video.html">Video</a></li>
+                            <li><a class="dropdown-item" href="./speeches/video.html">Video</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="./gallery.html">Gallery</a>
+                        <a class="nav-link active" aria-current="page" href="./gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./message.html">Messages</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!-- Hero Section -->
-    <img src="../assets/img/banner.png" width="100%" alt="" class="img-fluid">
-    <div class="container">
-        <div class="p-4"></div>
-        <p class="h3 text-center">
-            Walk Down the Memory Lane
-        </p>
-        <p class="h5">
-            Memories are timeless treasures. This Photo Gallery is a memory book displaying many moments worth
-            remembering and preserving.
-            <br>
-            Scroll the photographs of Justice R.C. Lahoti with various dignitaries, while taking oath, meeting the
-            President, Former Prime Minister, with family and delivering lectures at various seminars and conferences.
-        </p>
-        <div class="p-4"></div>
-        <div class="row align-items-center justify-content-center" id="row">
+
+    <!-- Header -->
+    <div class="bg-light py-5 mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-4">Walk Down Memory Lane</h1>
+                    <p class="lead text-muted">Timeless treasures and moments worth preserving</p>
+                </div>
+            </div>
         </div>
     </div>
+
+    <!-- Main Content -->
+    <main class="container mb-5">
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center">
+                <p class="lead">
+                    A treasured collection of cherished moments—Justice R.C. Lahoti with distinguished dignitaries,
+                    taking the oath of office, meeting the President and Former Prime Ministers, sharing moments with
+                    family,
+                    and delivering lectures at various seminars and conferences. Each photograph tells a story of
+                    dedication,
+                    wisdom, and service.
+                </p>
+            </div>
+        </div>
+
+        <!-- Collage Gallery -->
+        <div class="gallery-collage" id="gallery-collage">
+            <!-- Images will be dynamically injected here -->
+        </div>
+
+        <!-- Lightbox Modal -->
+        <div class="lightbox" id="lightbox">
+            <div class="lightbox-content">
+                <span class="lightbox-close" id="lightbox-close">&times;</span>
+                <img src="" alt="Gallery Image" id="lightbox-img">
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-12">
+                    <h5>Justice R.C. Lahoti</h5>
+                    <p class="small mb-0">In Loving Memory</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
@@ -91,34 +134,90 @@
             "98e_1.jpg", "98e_2.jpg", "98e_3.jpg", "101e.jpg"
         ];
 
-        // Get the row div by its id
-        const rowDiv = document.getElementById('row');
+        const galleryCollage = document.getElementById('gallery-collage');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
 
-        // Loop through the array of image filenames
-        for (let i = 0; i < arrOfImg.length; i++) {
-            // Create a new div element for col-md-4 col-12
-            const colDiv = document.createElement('div');
-            colDiv.className = 'col-md-4 col-12';
+        // Size classes for varied collage effect
+        const sizeClasses = ['', 'size-small', 'size-large', 'size-featured'];
 
-            // Create a new div element for p-3
-            const p3Div = document.createElement('div');
-            p3Div.className = 'p-3';
+        // Create gallery items with varied sizes
+        arrOfImg.forEach((imgName, index) => {
+            const item = document.createElement('div');
+            item.className = 'gallery-item';
 
-            // Create a new img element
+            // Add varied sizes (featured size for every 8th image, varied for others)
+            if (index % 8 === 0) {
+                item.classList.add('size-featured');
+            } else {
+                const randomSize = sizeClasses[Math.floor(Math.random() * 3)];
+                if (randomSize) item.classList.add(randomSize);
+            }
+
+            // Set staggered animation delay
+            item.style.animationDelay = `${(index % 12) * 0.05}s`;
+
+            const photo = document.createElement('div');
+            photo.className = 'gallery-photo';
+
             const img = document.createElement('img');
-            img.src = `./assets/img/speach/hindi/${arrOfImg[i]}`;
-            img.alt = '';
-            img.className = 'img-fluid';
+            img.src = `./assets/img/speech/hindi/${imgName}`;
+            img.alt = 'Justice Lahoti Gallery Image';
+            img.loading = 'lazy';
 
-            // Append the img element to the p3 div
-            p3Div.appendChild(img);
+            // Lightbox click handler
+            photo.addEventListener('click', () => {
+                lightbox.classList.add('active');
+                lightboxImg.src = img.src;
+                document.body.style.overflow = 'hidden';
+            });
 
-            // Append the p3 div to the col div
-            colDiv.appendChild(p3Div);
+            photo.appendChild(img);
+            item.appendChild(photo);
+            galleryCollage.appendChild(item);
+        });
 
-            // Append the col div to the row div
-            rowDiv.appendChild(colDiv);
-        }
+        // Close lightbox handlers
+        lightboxClose.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // ESC key to close lightbox
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Intersection Observer for scroll animations (enhanced)
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all gallery items
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            observer.observe(item);
+        });
     </script>
 </body>
 
